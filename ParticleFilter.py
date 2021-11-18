@@ -126,6 +126,6 @@ class ParticleFilter:
             self.particle_list[i].Sampling(control)
             field[i] = self.particle_list[i].LikelihoodField(sensor_data)
             #self.particle_list[i].Mapping(sensor_data)
-
-        self.weights = field / np.sum(field)
+        if np.sum(field)!=0:
+            self.weights = field / np.sum(field)
         #self.Resampling(sensor_data)
