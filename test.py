@@ -85,15 +85,18 @@ if __name__ == '__main__':
         # Input Control
         action = -1
         k = cv2.waitKey(1)
+        #向前进
         if k==ord('w'):
             action = 1
         if k==ord('s'):
             action = 2
+        #向左转
         if k==ord('a'):
             action = 3
+        #向右转
         if k==ord('d'): 
             action = 4 
-        
+        #上下左右走
         if k==ord('i'):
             action = 5
         if k==ord('j'):
